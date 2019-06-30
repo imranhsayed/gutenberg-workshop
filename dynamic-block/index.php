@@ -1,12 +1,8 @@
 <?php
 /**
- * Plugin Name: Gutenberg Dynamic Block
- * Plugin URI: https://github.com/imranhsayed/gutenberg-workshop
- * Description: Dynamic Block
- * Version: 1.0.0
- * Author: Imran Sayed
+ * Dynamic Block Index file
  *
  * @package gutenberg-workshop
  */
 
-defined( 'ABSPATH' ) || exit;
+include 'inc/class-register-block.php';

@@ -29,8 +29,13 @@ This plugin adds a different Gutenberg blocks in the Gutenberg editor of your Wo
 - The `@wordpress/scripts` is installed in the root of the project. This is one single plugin that registers many blocks.
 - By default `@wordpress/package` uses `src/index.js` as entry point and `build/index.js` 
 - However we have also created custom scripts by overriding the defaults.
-- Example `npm run build:dynamic-block` will use the `dynamic-block/block.js` as entry point and output it to `dynamic-block/build/main.js`
+- Example `npm run build:dynamic-block` will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js`
 - Each directory like `dynamic-block` register their own block. Only the bundling happens from the root.
+
+## Scripts
+
+1. `build:dynamic-block` : will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js` for production
+1. `build:dynamic-block-watch` : will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js` in watch mode for development 
 
 ## What is included in this plugin ?
 

@@ -6,7 +6,8 @@
   "scripts": {
 	"build": "wp-scripts build",
 	"start": "wp-scripts start",
-	"build:dynamic-block": "wp-scripts build dynamic-block/block.js --output-path=dynamic-block/build"
+	"build:dynamic-block": "wp-scripts build dynamic-block/assets/js/block.js --output-path=dynamic-block/build",
+	"build:dynamic-block-watch": "wp-scripts start dynamic-block/assets/js/block.js --output-path=dynamic-block/build"
   },
   "repository": {
     "type": "git",

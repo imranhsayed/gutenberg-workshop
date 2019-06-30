@@ -11,4 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
+define( 'GWPC_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'GWPC_BLOCKS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+
 include 'dynamic-block/index.php';
