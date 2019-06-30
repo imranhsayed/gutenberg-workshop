@@ -1,0 +1,29 @@
+{
+  "name": "gutenberg-workshop",
+  "version": "1.0.0",
+  "description": "This plugin adds a different Gutenberg blocks in the Gutenberg editor of your WordPress dashboard.",
+  "main": "index.js",
+  "scripts": {
+	"build": "wp-scripts build",
+	"start": "wp-scripts start",
+	"build:dynamic-block": "wp-scripts build dynamic-block/block.js --output-path=dynamic-block/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imranhsayed/gutenberg-workshop.git"
+  },
+  "keywords": [
+    "gutenberg",
+    "gutenberg-plugin",
+    "wordpress-plugin"
+  ],
+  "author": "Imran Sayed",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/imranhsayed/gutenberg-workshop/issues"
+  },
+  "homepage": "https://github.com/imranhsayed/gutenberg-workshop#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "3.3.0"
+  }
+}
