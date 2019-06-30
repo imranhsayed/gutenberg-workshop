@@ -35,7 +35,11 @@ This plugin adds a different Gutenberg blocks in the Gutenberg editor of your Wo
 ## Scripts
 
 1. `build:dynamic-block` : will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js` for production
-1. `build:dynamic-block-watch` : will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js` in watch mode for development 
+2. `build:dynamic-block-watch` : will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js` in watch mode for development 
+
+## Dynamic Block Demo
+
+![](dynamic-block/demo/dynamic-block.gif)
 
 ## What is included in this plugin ?
 
