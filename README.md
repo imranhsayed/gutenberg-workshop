@@ -2,14 +2,14 @@
 
 This plugin adds a different Gutenberg blocks in the Gutenberg editor of your WordPress dashboard. 
 
-## Features
+## Features :clipboard:
 
 1. One Stop shop for learning Gutenberg
 2. Gutenbeg Blogs and Video Tutorial Links
 3. Gutenberg Example Plugins.
 
 
-## Installation
+## Installation :wrench:
 
 1. Download the zipped plugin. Unzip the plugin.
 2. Navigate to the __Plugins > Add new__ screen in your WordPress administrative dashboard.
