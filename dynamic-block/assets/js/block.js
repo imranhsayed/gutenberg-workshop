@@ -3,7 +3,7 @@ const { registerBlockType } = wp.blocks;
 const { withSelect } = wp.data;
 
 registerBlockType( 'gw-blocks/latest-post', {
-	title: __( 'Latest Posts', 'ozy' ),
+	title: __( 'Latest Posts', 'gutenberg-workshop' ),
 	icon: 'megaphone',
 	category: 'widgets',
 
@@ -26,13 +26,13 @@ registerBlockType( 'gw-blocks/latest-post', {
 
 				{/*Title*/}
 				<h1 className="c12-fc">
-					{ __( 'Latest Posts', 'ozy' ) }
+					{ __( 'Latest Posts', 'gutenberg-workshop' ) }
 				</h1>
 
 				{/*Popular News Topics*/}
 				<div className="popular-news-topics hot-topics-bar">
 					<p className="heading">
-						{ __( 'Latest Posts', 'ozy' ) }
+						{ __( 'Latest Posts', 'gutenberg-workshop' ) }
 					</p>
 					<ul>
 						{ posts.map( post => (

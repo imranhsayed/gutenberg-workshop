@@ -10,7 +10,7 @@ class GW_Register_Dynamic_Block {
 	/**
 	 * Construct method.
 	 */
-	protected function __construct() {
+	function __construct() {
 		add_action( 'init', [ $this, 'gw_blocks' ] );
 	}
 
@@ -22,9 +22,9 @@ class GW_Register_Dynamic_Block {
 		// Block front end styles.
 		wp_register_style(
 			'gw-block-front-end-styles',
-			GWPC_BLOCKS_URL . '/dynamic-block/assets/styles.css',
+			GWPC_BLOCKS_URL . '/dynamic-block/assets/css/style.css',
 			array( 'wp-edit-blocks' ),
-			filemtime( GWPC_BLOCKS_PATH . '/dynamic-block/assets/styles.css' )
+			filemtime( GWPC_BLOCKS_PATH . '/dynamic-block/assets/css/style.css' )
 		);
 		// Block editor styles.
 		wp_register_style(
@@ -37,9 +37,9 @@ class GW_Register_Dynamic_Block {
 		// Block Editor Script.
 		wp_register_script(
 			'gw-block-editor-js',
-			GWPC_BLOCKS_URL . '/dynamic-block/assets/build/blocks.js',
+			GWPC_BLOCKS_URL . '/dynamic-block/assets/build/main.js',
 			array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n' ),
-			filemtime( GWPC_BLOCKS_PATH . '/dynamic-block/assets/build/blocks.js' ),
+			filemtime( GWPC_BLOCKS_PATH . '/dynamic-block/build/main.js' ),
 			true
 		);
 
@@ -70,3 +70,5 @@ class GW_Register_Dynamic_Block {
 	}
 
 }
+
+new GW_Register_Dynamic_Block();

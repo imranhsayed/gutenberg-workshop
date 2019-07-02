@@ -5,10 +5,14 @@
  * @package gutenberg-workshop
  */
 
-foreach ( $latest_posts as $post ) {
-	?>
-	<div>
-		<h4><?php echo $post->title; ?></h4>
-	</div>
-	<?php
+if ( ! empty( $latest_posts ) && is_array( $latest_posts ) ) {
+
+	foreach ( $latest_posts as $post ) {
+		?>
+		<div>
+			<h4><?php echo $post->title; ?></h4>
+		</div>
+		<?php
+	}
+
 }
