@@ -66,15 +66,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./custom-category/assets/js/block.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./dynamic-block-ssr/assets/js/block.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./custom-category/assets/js/block.js":
-/*!********************************************!*\
-  !*** ./custom-category/assets/js/block.js ***!
-  \********************************************/
+/***/ "./dynamic-block-ssr/assets/js/block.js":
+/*!**********************************************!*\
+  !*** ./dynamic-block-ssr/assets/js/block.js ***!
+  \**********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -85,19 +85,28 @@ __webpack_require__.r(__webpack_exports__);
 
 var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
-console.warn('camcma');
-registerBlockType('gtbw-blocks/category-block', {
-  title: __('Category Block', 'gutenberg-workshop'),
-  icon: 'smiley',
-  category: 'gtbw-home-blocks',
-  edit: function edit(_ref) {
-    var className = _ref.className;
+var ServerSideRender = wp.components.ServerSideRender;
+registerBlockType('gtbw-blocks/dynamic-block-ssr', {
+  title: __('Dynamic Block SSR', 'gutenberg-workshop'),
+  icon: 'megaphone',
+  category: 'widgets',
+  attributes: {
+    name: {
+      type: 'String'
+    }
+  },
+  edit: function edit(props) {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: className
-    }, "Hello World!");
+      className: "gtbw-dynamic-block-ssr"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ServerSideRender, {
+      block: "gtbw-blocks/dynamic-block-ssr",
+      attributes: {
+        name: 'Imran'
+      }
+    }));
   },
   save: function save() {
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "Hello World!");
+    return null;
   }
 });
 

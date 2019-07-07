@@ -8,8 +8,11 @@
 	"start": "wp-scripts start",
 	"build:dynamic-block": "wp-scripts build dynamic-block/assets/js/block.js --output-path=dynamic-block/build",
 	"build:dynamic-block-watch": "wp-scripts start dynamic-block/assets/js/block.js --output-path=dynamic-block/build",
+	"build:dynamic-block-ssr": "wp-scripts build dynamic-block-ssr/assets/js/block.js --output-path=dynamic-block-ssr/build",
+	"build:dynamic-block-ssr-watch": "wp-scripts start dynamic-block-ssr/assets/js/block.js --output-path=dynamic-block-ssr/build",
 	"build:custom-category": "wp-scripts build custom-category/assets/js/block.js --output-path=custom-category/build",
 	"build:custom-category-watch": "wp-scripts start custom-category/assets/js/block.js --output-path=custom-category/build"
+
   },
   "repository": {
     "type": "git",

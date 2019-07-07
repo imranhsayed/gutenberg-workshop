@@ -12,8 +12,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'GWPC_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
-define( 'GWPC_BLOCKS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+define( 'GTBW_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'GTBW_BLOCKS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 
+include 'helpers/custom-functions.php';
 include 'dynamic-block/index.php';
+include 'dynamic-block-ssr/index.php';
 include 'custom-category/index.php';

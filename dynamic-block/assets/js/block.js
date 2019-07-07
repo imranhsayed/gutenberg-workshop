@@ -2,7 +2,7 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { withSelect } = wp.data;
 
-registerBlockType( 'gw-blocks/latest-post', {
+registerBlockType( 'gtbw-blocks/latest-post', {
 	title: __( 'Latest Posts', 'gutenberg-workshop' ),
 	icon: 'megaphone',
 	category: 'widgets',

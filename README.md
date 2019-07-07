@@ -39,14 +39,18 @@ This plugin adds a different Gutenberg blocks in the Gutenberg editor of your Wo
 
 *Similarly Commands for creating bundle file ( JavasScript file ) for other blocks*
 
-3. `build:custom-category` creates bundle file for custom-category block
-4. `build:custom-category-watch` creates bundle file for custom-category block in watch mode.
+3. `build:dynamic-block-ssr` creates bundle file for dynamic-block-ssr block
+4. `build:dynamic-block-ssr-watch` creates bundle file for dynamic-block-ssr block in watch mode.
 
-## Dynamic Block Demo
+5. `build:custom-category` creates bundle file for custom-category block
+6. `build:custom-category-watch` creates bundle file for custom-category block in watch mode.
+
+
+## Dynamic Block Demo :video_camera:
 
 ![](dynamic-block/demo/dynamic-block.gif)
 
-## Custom Category Demo
+## Custom Category Demo :video_camera:
 ![](custom-category/demo/custom-category.gif)
 
 ## What is included in this plugin ?

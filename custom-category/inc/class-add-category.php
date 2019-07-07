@@ -8,7 +8,7 @@
 /**
  * Class Blocks
  */
-class Add_Categories {
+class GTBW_Add_Categories {
 
 	/**
 	 * Construct method.
@@ -39,8 +39,8 @@ class Add_Categories {
 			$categories,
 			array(
 				array(
-					'slug'  => 'gw-home-blocks',
-					'title' => __( 'GW Custom blocks', 'gutenberg-workshop' ),
+					'slug'  => 'gtbw-home-blocks',
+					'title' => __( 'GTPW Custom blocks', 'gutenberg-workshop' ),
 				),
 			)
 		);
@@ -48,4 +48,4 @@ class Add_Categories {
 
 }
 
-new Add_Categories();
+new GTBW_Add_Categories();
