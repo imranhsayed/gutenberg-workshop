@@ -32,6 +32,23 @@ This plugin adds a different Gutenberg blocks in the Gutenberg editor of your Wo
 - Example `npm run build:dynamic-block` will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js`
 - Each directory like `dynamic-block` register their own block. Only the bundling happens from the root.
 
+## Directory Structure
+
+```ruby
+	-assets
+		-css
+		-js
+			-block.js
+	-build
+		-main.js
+	-inc
+		-block-templates
+		-class-register-block.php
+	-helpers
+		-custom-functions.php
+	-index.php						
+```
+
 ## Scripts
 
 1. `build:dynamic-block` : will use the `dynamic-block/assets/js/block.js` as entry point and output it to `dynamic-block/build/main.js` for production
@@ -59,6 +76,17 @@ This plugin adds a different Gutenberg blocks in the Gutenberg editor of your Wo
 - It uses Webpack to bundle all of its dependencies into one file index.js
 - Has separate stylesheet for front-end & editor.
 
+## Blocks Description :clipboard:
+
+1. [custom-category](https://github.com/imranhsayed/gutenberg-workshop/tree/master/custom-category) Creates a custom catageory `GW Custom Blocks` and registers a block under the same category.
+
+2. [dynamic-block](https://github.com/imranhsayed/gutenberg-workshop/tree/master/dynamic-block) Creates a dynamic block `Latest Posts`, that renders content as saved from the edit function in editor. 
+The content that is returned by `render_callback()` is displayed on the front end. Here the editor content and front content can be different if you return different
+content from `edit()` in block.js and `render_callback()` in php file. 
+
+3. [dynamic-block-ssr](https://github.com/imranhsayed/gutenberg-workshop/tree/master/dynamic-block-ssr) Creates a dynamic block and returns the same content both in editor and front end, what is returned
+by `render_callback()`, using `<ServerSideRender>`. The data that you pass in attributes of`<ServerSideRender attributes={{ name: 'Imran' }}>` will be available in `render_callback( $attributes )` in php.
+You must define its type in the `register_block_type()`
 
 ## Useful Blogs:
 
