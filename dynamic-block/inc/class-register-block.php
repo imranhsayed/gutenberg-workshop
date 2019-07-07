@@ -37,7 +37,7 @@ class GW_Register_Dynamic_Block {
 		// Block Editor Script.
 		wp_register_script(
 			'gw-block-editor-js',
-			GWPC_BLOCKS_URL . '/dynamic-block/assets/build/main.js',
+			GWPC_BLOCKS_URL . '/dynamic-block/build/main.js',
 			array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n' ),
 			filemtime( GWPC_BLOCKS_PATH . '/dynamic-block/build/main.js' ),
 			true

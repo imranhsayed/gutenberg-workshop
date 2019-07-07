@@ -38,7 +38,7 @@ class GW_Register_Simple_Block{
 		// Block Editor Script.
 		wp_register_script(
 			'gw-category-block-editor-js',
-			GWPC_BLOCKS_URL . '/custom-category/assets/build/blocks.js',
+			GWPC_BLOCKS_URL . '/custom-category/build/main.js',
 			array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n' ),
 			filemtime( GWPC_BLOCKS_PATH . '/custom-category/build/main.js' ),
 			true

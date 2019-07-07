@@ -4,7 +4,7 @@ console.warn( 'camcma' );
 registerBlockType( 'gw-blocks/category-block', {
 	title: __( 'Category Block', 'gutenberg-workshop' ),
 	icon: 'smiley',
-	category: 'layout',
+	category: 'gw-home-blocks',
 	edit: ( { className } ) => <div className={ className }>Hello World!</div>,
 	save: () => <div>Hello World!</div>,
 } );

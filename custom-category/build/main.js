@@ -89,7 +89,7 @@ console.warn('camcma');
 registerBlockType('gw-blocks/category-block', {
   title: __('Category Block', 'gutenberg-workshop'),
   icon: 'smiley',
-  category: 'layout',
+  category: 'gw-home-blocks',
   edit: function edit(_ref) {
     var className = _ref.className;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
