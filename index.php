@@ -19,3 +19,4 @@ include 'helpers/custom-functions.php';
 include 'dynamic-block/index.php';
 include 'dynamic-block-ssr/index.php';
 include 'custom-category/index.php';
+include 'store-example/index.php';
