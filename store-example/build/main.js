@@ -138,12 +138,10 @@ module.exports = _objectSpread;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _register_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./register-store */ "./store-example/assets/js/register-store.js");
+/* harmony import */ var _food_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./food-store */ "./store-example/assets/js/food-store.js");
 var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
-var ServerSideRender = wp.components.ServerSideRender;
 
-console.warn('came');
 registerBlockType('gtbw-blocks/store-example', {
   title: __('Store Example Block', 'gutenberg-workshop'),
   icon: 'megaphone',
@@ -153,7 +151,9 @@ registerBlockType('gtbw-blocks/store-example', {
       type: 'String'
     }
   },
-  edit: edit,
+  edit: function edit() {
+    return 'Hello';
+  },
   save: function save() {
     return null;
   }
@@ -161,10 +161,10 @@ registerBlockType('gtbw-blocks/store-example', {
 
 /***/ }),
 
-/***/ "./store-example/assets/js/register-store.js":
-/*!***************************************************!*\
-  !*** ./store-example/assets/js/register-store.js ***!
-  \***************************************************/
+/***/ "./store-example/assets/js/food-store.js":
+/*!***********************************************!*\
+  !*** ./store-example/assets/js/food-store.js ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -174,14 +174,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__);
 
 var initialState = {
-  firstName: 'Imran'
+  chocolate: 'Dairy Milk'
 };
 var actions = {
-  setLastName: function setLastName() {
-    var lastName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Sayed';
+  setCookie: function setCookie() {
+    var cookie = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Crack-jack';
     return {
-      type: 'LAST_NAME',
-      payload: 'Sayed'
+      type: 'COOKIES',
+      payload: cookie
     };
   }
 };
@@ -190,29 +190,29 @@ var myStore = {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
     var action = arguments.length > 1 ? arguments[1] : undefined;
 
-    if (action.type === 'LAST_NAME') {
+    if (action.type === 'COOKIES') {
       return _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0___default()({}, state, {
-        lastName: action.payload
+        cookie: action.payload
       });
     }
 
     return state;
   },
   selectors: {
-    getFirstName: function getFirstName(state) {
-      return state.firstName;
+    getChocolateName: function getChocolateName(state) {
+      return state.chocolate;
     },
-    getLastName: function getLastName(state) {
-      return state.lastName ? state.lastName : null;
+    getCookieName: function getCookieName(state) {
+      return state.cookie ? state.cookie : null;
     },
-    getFullName: function getFullName(state) {
-      var lastName = state.lastName ? " ".concat(state.lastName) : '';
-      return state.firstName + lastName;
+    getChocolateAndCookie: function getChocolateAndCookie(state) {
+      var cookie = state.cookie ? " ".concat(state.cookie, ", ") : '';
+      return state.chocolate + cookie;
     }
   },
   actions: actions
 };
-wp.data.registerStore('person', myStore);
+wp.data.registerStore('food', myStore);
 
 /***/ })
 

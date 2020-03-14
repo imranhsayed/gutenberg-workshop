@@ -1,10 +1,7 @@
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { ServerSideRender } = wp.components;
 
-import './register-store'
-
-console.warn( 'came' );
+import './food-store';
 
 registerBlockType( 'gtbw-blocks/store-example', {
 	title: __( 'Store Example Block', 'gutenberg-workshop' ),
@@ -17,7 +14,9 @@ registerBlockType( 'gtbw-blocks/store-example', {
 		},
 	},
 
-	edit: edit,
+	edit: () => {
+		return 'Hello';
+	},
 
 	save: () => {
 		return null;
