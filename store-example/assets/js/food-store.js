@@ -21,10 +21,10 @@ const myStore =  {
 		return state;
 	},
 	selectors: {
-		getChocolateName( state ) {
+		getChocolate( state ) {
 			return state.chocolate;
 		},
-		getCookieName( state ) {
+		getCookie( state ) {
 			return state.cookie ? state.cookie : null;
 		},
 		getChocolateAndCookie( state ) {
@@ -38,3 +38,10 @@ const myStore =  {
 };
 
 wp.data.registerStore( 'food', myStore );
+
+wp.data.subscribe( () => {
+	const cookie = wp.data.select('food').getCookie();
+	if ( cookie ) {
+		console.warn( 'Got new cookie: ', cookie );
+	}
+} );

@@ -199,10 +199,10 @@ var myStore = {
     return state;
   },
   selectors: {
-    getChocolateName: function getChocolateName(state) {
+    getChocolate: function getChocolate(state) {
       return state.chocolate;
     },
-    getCookieName: function getCookieName(state) {
+    getCookie: function getCookie(state) {
       return state.cookie ? state.cookie : null;
     },
     getChocolateAndCookie: function getChocolateAndCookie(state) {
@@ -213,6 +213,13 @@ var myStore = {
   actions: actions
 };
 wp.data.registerStore('food', myStore);
+wp.data.subscribe(function () {
+  var cookie = wp.data.select('food').getCookie();
+
+  if (cookie) {
+    console.warn('Got new cookie: ', cookie);
+  }
+});
 
 /***/ })
 
