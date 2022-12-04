@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/imranhsayed/gutenberg-workshop#readme",
   "devDependencies": {
-    "@wordpress/scripts": "3.3.0"
+    "@wordpress/scripts": "24.6.0"
   }
 }
